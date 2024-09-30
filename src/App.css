@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+body {
+  /* background-image: url(images/bg1.jpg); */
+  background-color: rgb(200, 220, 255);
+}
+.htext {
+  @apply lg:text-[36px] md:text-[30px] text-[24px] text-Header;
+}
+
+.btext {
+  @apply lg:text-[22px] md:text-[20px] text-[18px] text-Text; 
+}
+.btn {
+  @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
+}
+.fhtext {
+  @apply lg:text-[36px] md:text-[30px] text-[24px] text-Header;
+}
