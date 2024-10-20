@@ -5,15 +5,15 @@ export const Footer = () => {
   const currentYear = new Date().getFullYear();
   return (
     <>
-      <footer className="mt-10 bg-Text text-Header lg:px-[250px] md:px-[100px] px-[30px]">
+      <footer className="footer">
         <section className=" flex flex-col items-center md:items-start lg:items-start md:flex-row lg:flex-row  gap-[30px] md:gap-[100px] lg:gap-[300px] content-center">
-          <figure className="flex flex-col lg:w-[350px]">
+          <figure className="flex flex-col items-center lg:w-[350px]">
             <Link href="/">
-              <img
-                src="/images/logo2.png"
-                alt="QuadCode"
-                className=" w-[40%] h-[40%] ml-[100px]"
-              />
+            <img
+            src="/images/mlogo.png"
+            alt="QuadCode"
+            className="py-4 w-[70px] h-[90px] mr-10"
+          />
             </Link>
             <h2 className="">
               Crafting innovative digital experiences in Web Design & Web3.
@@ -106,7 +106,7 @@ export const Footer = () => {
           </main>
         </section>
         <div className="relative my-4">
-          <hr className="border-t-2 border-Header w-full" />
+          <hr className="hr" />
         </div>
         <footer className="w-full text-center py-4">
           <p>© {currentYear} QuadCode Solutions. All rights reserved.</p>

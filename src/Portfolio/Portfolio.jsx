@@ -16,15 +16,15 @@ export const Portfolio = () => {
             </div>
             <main className="flex gap-[50px]">
               <div className="flex gap-2 items-center">
-                <h1 className="text-[50px] font-semibold text-Text">2</h1>
+                <h1 className="ytext">2</h1>
                 <p>
-                  <h2 className="w-[70px] text-Header">YEARS OF EXPERIENCE</h2>
+                  <h2 className="w-[75px] ">YEARS OF EXPERIENCE</h2>
                 </p>
               </div>
               <div className="flex gap-2 items-center">
-                <h1 className="text-[50px] font-semibold text-Text">10</h1>
+                <h1 className="ytext">10</h1>
                 <p>
-                  <h2 className="w-[70px] text-Header">PROJECT COMPLETED</h2>
+                  <h2 className="w-[70px] ">PROJECT COMPLETED</h2>
                 </p>
               </div>
             </main>

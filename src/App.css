@@ -2,20 +2,109 @@
 
 /* Body and general styles */
 body {
-  background-color: rgb(200, 220, 255);
-  font-family: "Manrope", sans-serif;
+  background-color: #fff9e6; /* Light mode background color */
+  font-family: "Manrope", sans-serif; /* Default font */
+  color: #002147; /* Light mode text color */
+}
+
+/* Dark mode styles */
+.dark body {
+  background-color: #002147; /* Dark mode background color */
+  color: #fff9e6; /* Dark mode text color */
+}
+
+/* Accent styles */
+.accent {
+  color: #ffd700; /* Accent color */
+}
+/* Light Mode */
+.header,
+.footer {
+  background-color: #002147; /* Deep navy */
+  color: #fff9e6; /* Soft cream */
+}
+
+/* Dark Mode */
+.dark .header,
+.dark .footer {
+  background-color: #fff9e6; /* Soft cream */
+  color: #002147; /* Deep navy */
+}
+
+/* Header styles */
+.header {
+  @apply z-10 lg:px-[250px] md:px-[100px] px-[30px] sticky top-0 bg-Header text-THeader flex items-center justify-between border-b border-gray-400;
+}
+
+.dark .header {
+  @apply bg-DHeader text-DTHeader; /* Dark mode header background and text color */
+}
+
+.mheader {
+  @apply p-2 flex gap-10 md:hidden lg:hidden px-[55px] fixed bottom-0 left-0 right-0 bg-Header text-THeader border-gray-400 z-10;
+}
+
+.dark .mheader {
+  @apply bg-DHeader text-DTHeader; /* Dark mode header background and text color */
+}
+
+/* Footer styles */
+.footer {
+  @apply bg-Header text-THeader mt-10 lg:px-[250px] md:px-[100px] px-[30px]; /* Light mode footer background and text color */
+}
+
+.dark .footer {
+  @apply bg-DHeader text-DTHeader; /* Dark mode footer background and text color */
 }
 
 .htext {
   @apply lg:text-[36px] md:text-[30px] text-[24px] text-Header;
 }
-
-.btext {
-  @apply lg:text-[22px] md:text-[20px] text-[18px] text-Text;
+.dark .htext{
+  @apply text-DHeader ; /* Dark mode header text color */
 }
 
+.btext {
+  @apply lg:text-[22px] md:text-[20px] text-[18px] text-Header;
+}
+.dark .btext{
+  @apply text-Text ; /* Dark mode header text color */
+}
+
+.ytext {
+  @apply text-[50px] font-semibold text-Text;
+}
+.dark .ytext{
+  @apply text-Text ; /* Dark mode header text color */
+}
+
+.ptext {
+  @apply text-DHeader w-[330px] md:w-[360px] py-[30px] px-5 rounded-[20px] bg-Header;
+}
+.dark .ptext{
+  @apply text-Header bg-DHeader; /* Dark mode header text color */
+}
+
+.pptext{
+  @apply text-[20px] leading-[18px] font-bold text-white
+}
+.dark .pptext{
+  @apply text-Header bg-DHeader; /* Dark mode header text color */
+}
+
+.hr{
+  @apply border-t-2 border-THeader w-full
+}
+.dark .hr{
+  @apply border-Header
+}
+
+
 .btn {
-  @apply animate-bounce focus:animate-none hover:animate-none inline-flex text-sm font-medium bg-indigo-900 mt-3 px-4 py-2 rounded-lg tracking-wide text-white;
+  @apply animate-bounce focus:animate-none hover:animate-none inline-flex text-sm font-medium bg-Header mt-3 px-4 py-2 rounded-lg tracking-wide text-DHeader;
+}
+.dark .btn {
+  @apply bg-DHeader text-Header
 }
 
 .fhtext {
@@ -69,5 +158,3 @@ body {
     opacity: 0.5; /* Fades out slightly */
   }
 }
-
-

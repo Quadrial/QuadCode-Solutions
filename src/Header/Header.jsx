@@ -1,10 +1,28 @@
 import { Link } from "react-scroll";
 import { FiHome, FiUser, FiTool, FiBriefcase, FiMail } from "react-icons/fi";
+import { SiReactiveresume } from "react-icons/si";
+import ThemeToggle from "../DarkMode/ThemeToggle";
 
 export default function Header() {
+  const handleResumeClick = (event) => {
+    event.preventDefault(); // Prevent default link behavior
+
+    // Open the resume in a new tab
+    const resumeUrl = "/images/mlogo.png"; // Update this to your resume file path
+    window.open(resumeUrl, "_blank");
+
+    // Trigger the download
+    const link = document.createElement("a");
+    link.href = resumeUrl;
+    link.download = "resume.pdf"; // Specify the file name
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <>
-      <div className="z-10 lg:px-[250px] md:px-[100px] px-[30px] sticky top-0 bg-Text text-Header flex items-center justify-between border-b border-gray-400">
+      <div className="header">
         <Link href="/" className="flex gap-2 items-center">
           <img
             src="/images/mlogo.png"
@@ -19,6 +37,7 @@ export default function Header() {
           <Link
             to="homeSection"
             smooth={true}
+            offset={-80}
             duration={500}
             className="cursor-pointer my-8 uppercase"
           >
@@ -27,6 +46,7 @@ export default function Header() {
           <Link
             to="aboutSection"
             smooth={true}
+            offset={-80}
             duration={500}
             className="cursor-pointer my-8 uppercase"
           >
@@ -35,6 +55,7 @@ export default function Header() {
           <Link
             to="toolkitSection"
             smooth={true}
+            offset={-80}
             duration={500}
             className="cursor-pointer my-8 uppercase"
           >
@@ -43,6 +64,7 @@ export default function Header() {
           <Link
             to="projectSection"
             smooth={true}
+            offset={-80}
             duration={500}
             className="cursor-pointer my-8 uppercase"
           >
@@ -51,20 +73,35 @@ export default function Header() {
           <Link
             to="contactSection"
             smooth={true}
+            offset={-80}
             duration={500}
             className="cursor-pointer my-8 uppercase"
           >
             Contact
           </Link>
         </main>
+
+        {/* Theme Navigation */}
+        <div className="flex gap-4">
+          {/* Resume Link */}
+          <a
+            href="/images/mlogo.png" // Update this to your resume file path
+            onClick={handleResumeClick}
+            className="flex items-center"
+          >
+            <SiReactiveresume className="text-2xl" /> {/* Resume Icon */}
+          </a>
+          <ThemeToggle />
+        </div>
       </div>
 
       {/* Mobile Icon Navigation */}
-      <section className="MOBILE-MENU p-2 flex gap-10 md:hidden lg:hidden px-[30px] fixed bottom-0 left-0 right-0 bg-Text border-t border-gray-400 z-10">
+      <section className="mheader MOBILE-MENU ">
         <Link
           to="homeSection"
           smooth={true}
           duration={500}
+          offset={-80}
           className="cursor-pointer text-2xl"
         >
           <FiHome /> {/* Home Icon */}
@@ -73,6 +110,7 @@ export default function Header() {
           to="aboutSection"
           smooth={true}
           duration={500}
+          offset={-80}
           className="cursor-pointer text-2xl"
         >
           <FiUser /> {/* About Icon */}
@@ -80,6 +118,7 @@ export default function Header() {
         <Link
           to="toolkitSection"
           smooth={true}
+          offset={-80}
           duration={500}
           className="cursor-pointer text-2xl"
         >
@@ -88,6 +127,7 @@ export default function Header() {
         <Link
           to="projectSection"
           smooth={true}
+          offset={-80}
           duration={500}
           className="cursor-pointer text-2xl"
         >
@@ -96,6 +136,7 @@ export default function Header() {
         <Link
           to="contactSection"
           smooth={true}
+          offset={-80}
           duration={500}
           className="cursor-pointer text-2xl"
         >

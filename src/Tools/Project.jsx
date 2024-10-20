@@ -8,13 +8,10 @@ import { RxExternalLink } from "react-icons/rx";
 
 export const Project = () => {
   return (
-    <section className="mt-10">
-      <main
-        name="projectSection"
-        className="flex flex-col justify-center items-center content-center text-center"
-      >
-        <div className="text-[32px]">Projects</div>
-        <p className="text-[20px]">Innovations Brought to Life</p>
+    <section className="mt-10" name="projectSection">
+      <main className="flex flex-col justify-center items-center content-center text-center">
+        <div className="htext">Projects</div>
+        <p className=" btext">Innovations Brought to Life</p>
       </main>
       <Swiper
         className="mt-5 pb-12" // Added padding to bottom for pagination buttons
@@ -39,7 +36,7 @@ export const Project = () => {
       >
         {/*  Doc SwiperSlides */}
         <SwiperSlide>
-          <div className="text-Text w-[300px] md:w-[350px] py-[30px] px-5 rounded-[20px] bg-Header">
+          <div className="ptext">
             <div className="flex flex-col items-center gap-[13px]">
               {/* Embed the live preview in an iframe */}
               <iframe
@@ -50,9 +47,7 @@ export const Project = () => {
                 allowFullScreen
               ></iframe>
               <div>
-                <h4 className="text-[18px] leading-[20px] font-bold ">
-                  Doctor Appointment Landingpage
-                </h4>
+                <h4 className="pptext">Doctor Appointment Landingpage</h4>
               </div>
             </div>
             <p className="text-[16px] leading-7 mt-4 font-[400]">
@@ -92,7 +87,7 @@ export const Project = () => {
         </SwiperSlide>
         {/*  Bookmark SwiperSlides */}
         <SwiperSlide>
-          <div className="text-Text w-[300px] md:w-[350px] py-[30px] px-5 rounded-[20px] bg-Header">
+          <div className="ptext">
             <div className="flex flex-col items-center gap-[13px]">
               {/* Embed the live preview in an iframe */}
               <iframe
@@ -103,9 +98,7 @@ export const Project = () => {
                 allowFullScreen
               ></iframe>
               <div>
-                <h4 className="text-[18px] leading-[20px] font-bold ">
-                  Bookmark Landing Page
-                </h4>
+                <h4 className="pptext">Bookmark Landing Page</h4>
               </div>
             </div>
             <p className="text-[16px] leading-7 mt-4 font-[400]">
@@ -146,7 +139,7 @@ export const Project = () => {
         </SwiperSlide>
         {/*  Space SwiperSlides */}
         <SwiperSlide>
-          <div className="text-Text w-[300px] md:w-[350px] py-[30px] px-5 rounded-[20px] bg-Header">
+          <div className="ptext">
             <div className="flex flex-col items-center gap-[13px]">
               {/* Embed the live preview in an iframe */}
               <iframe
@@ -157,9 +150,7 @@ export const Project = () => {
                 allowFullScreen
               ></iframe>
               <div>
-                <h4 className="text-[18px] leading-[20px] font-bold ">
-                 Space tourism multi-page website
-                </h4>
+                <h4 className="pptext">Space tourism multi-page website</h4>
               </div>
             </div>
             <p className="text-[16px] leading-7 mt-4 font-[400]">
@@ -200,7 +191,7 @@ export const Project = () => {
 
         {/* Countries SwiperSlides */}
         <SwiperSlide>
-          <div className="text-Text w-[300px] md:w-[350px] py-[30px] px-5 rounded-[20px] bg-Header">
+          <div className="ptext">
             <div className="flex flex-col items-center gap-[13px]">
               {/* Embed the live preview in an iframe */}
               <iframe
@@ -211,7 +202,7 @@ export const Project = () => {
                 allowFullScreen
               ></iframe>
               <div>
-                <h4 className="text-[18px] leading-[20px] font-bold ">
+                <h4 className="pptext">
                   REST Countries API with color theme switcher
                 </h4>
               </div>
@@ -251,9 +242,9 @@ export const Project = () => {
             </div>
           </div>
         </SwiperSlide>
-          {/* Address SwiperSlides */}
+        {/* Address SwiperSlides */}
         <SwiperSlide>
-          <div className="text-Text w-[300px] md:w-[350px] py-[30px] px-5 rounded-[20px] bg-Header">
+          <div className="ptext">
             <div className="flex flex-col items-center gap-[13px]">
               {/* Embed the live preview in an iframe */}
               <iframe
@@ -264,9 +255,7 @@ export const Project = () => {
                 allowFullScreen
               ></iframe>
               <div>
-                <h4 className="text-[18px] leading-[20px] font-bold ">
-                  IP Address Tracker
-                </h4>
+                <h4 className="pptext">IP Address Tracker</h4>
               </div>
             </div>
             <p className="text-[16px] leading-7 mt-4 font-[400]">
@@ -306,7 +295,7 @@ export const Project = () => {
         </SwiperSlide>
 
         <SwiperSlide>
-          <div className="text-Text w-[300px] md:w-[350px] py-[30px] px-5 rounded-[20px] bg-Header">
+          <div className="ptext">
             <div className="flex flex-col items-center gap-[13px]">
               {/* Embed the live preview in an iframe */}
               <iframe
@@ -317,9 +306,7 @@ export const Project = () => {
                 allowFullScreen
               ></iframe>
               <div>
-                <h4 className="text-[18px] leading-[20px] font-bold ">
-                  Doctor Appointment Landingpage
-                </h4>
+                <h4 className="pptext">Doctor Appointment Landingpage</h4>
               </div>
             </div>
             <p className="text-[16px] leading-7 mt-4 font-[400]">
