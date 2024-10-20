@@ -72,7 +72,7 @@ const ContactForm = () => {
           />
         </div>
         <button type="submit" value="Send" className="btn mt-5">
-          SEND
+        💌 SEND 💌
         </button>
       </form>
     </section>

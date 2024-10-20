@@ -1,18 +1,73 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+/* Body and general styles */
 body {
-  /* background-image: url(images/bg1.jpg); */
   background-color: rgb(200, 220, 255);
+  font-family: "Manrope", sans-serif;
 }
+
 .htext {
   @apply lg:text-[36px] md:text-[30px] text-[24px] text-Header;
 }
 
 .btext {
-  @apply lg:text-[22px] md:text-[20px] text-[18px] text-Text; 
+  @apply lg:text-[22px] md:text-[20px] text-[18px] text-Text;
 }
+
 .btn {
-  @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
+  @apply animate-bounce focus:animate-none hover:animate-none inline-flex text-sm font-medium bg-indigo-900 mt-3 px-4 py-2 rounded-lg tracking-wide text-white;
 }
+
 .fhtext {
   @apply lg:text-[36px] md:text-[30px] text-[24px] text-Header;
 }
+
+.tool-icon {
+  position: absolute;
+  width: 100px;
+  opacity: 0.8;
+  animation: fallIcon 8s linear infinite;
+}
+
+.tool-icon:nth-child(1) {
+  left: 10%;
+  animation-duration: 5s;
+}
+.tool-icon:nth-child(2) {
+  left: 20%;
+  animation-duration: 6s;
+}
+.tool-icon:nth-child(3) {
+  left: 30%;
+  animation-duration: 7s;
+}
+.tool-icon:nth-child(4) {
+  left: 40%;
+  animation-duration: 8s;
+}
+.tool-icon:nth-child(5) {
+  left: 50%;
+  animation-duration: 9s;
+}
+.tool-icon:nth-child(6) {
+  left: 60%;
+  animation-duration: 10s;
+}
+.tool-icon:nth-child(7) {
+  left: 70%;
+  animation-duration: 11s;
+}
+
+/* Keyframes for falling animation */
+@keyframes fallIcon {
+  0% {
+    transform: translateY(-100px); /* Start above the screen */
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh); /* Fall to the bottom of the screen */
+    opacity: 0.5; /* Fades out slightly */
+  }
+}
+
+
