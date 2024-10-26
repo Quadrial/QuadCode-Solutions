@@ -41,7 +41,7 @@ body {
 }
 
 .mheader {
-  @apply p-2 flex gap-10 md:hidden lg:hidden px-[55px] fixed bottom-0 left-0 right-0 bg-Header text-THeader border-gray-400 z-10;
+  @apply p-2 flex justify-center gap-4 md:hidden lg:hidden px-[30px] fixed bottom-0 left-0 right-0 bg-Header text-THeader border-gray-400 z-10;
 }
 
 .dark .mheader {
@@ -60,55 +60,61 @@ body {
 .htext {
   @apply lg:text-[36px] md:text-[30px] text-[24px] text-Header;
 }
-.dark .htext{
-  @apply text-DHeader ; /* Dark mode header text color */
+.dark .htext {
+  @apply text-DHeader; /* Dark mode header text color */
 }
 
 .btext {
   @apply lg:text-[22px] md:text-[20px] text-[18px] text-Header;
 }
-.dark .btext{
-  @apply text-Text ; /* Dark mode header text color */
+.dark .btext {
+  @apply text-Text; /* Dark mode header text color */
 }
 
 .ytext {
   @apply text-[50px] font-semibold text-Text;
 }
-.dark .ytext{
-  @apply text-Text ; /* Dark mode header text color */
+.dark .ytext {
+  @apply text-Text; /* Dark mode header text color */
 }
 
 .ptext {
-  @apply text-DHeader w-[330px] md:w-[360px] py-[30px] px-5 rounded-[20px] bg-Header;
+  @apply text-DHeader w-auto md:w-auto lg:w-auto py-[30px] px-5 rounded-[20px] bg-Header;
 }
-.dark .ptext{
+.dark .ptext {
   @apply text-Header bg-DHeader; /* Dark mode header text color */
 }
 
-.pptext{
-  @apply text-[20px] leading-[18px] font-bold text-white
+.pptext {
+  @apply text-[20px] leading-[18px] font-bold text-white;
 }
-.dark .pptext{
+.dark .pptext {
   @apply text-Header bg-DHeader; /* Dark mode header text color */
 }
 
-.hr{
-  @apply border-t-2 border-THeader w-full
+.hr {
+  @apply border-t-2 border-THeader w-full;
 }
-.dark .hr{
-  @apply border-Header
+.dark .hr {
+  @apply border-Header;
 }
 
+.ricon {
+  @apply animate-bounce focus:animate-none hover:animate-none inline-flex text-3xl;
+}
 
 .btn {
   @apply animate-bounce focus:animate-none hover:animate-none inline-flex text-sm font-medium bg-Header mt-3 px-4 py-2 rounded-lg tracking-wide text-DHeader;
 }
 .dark .btn {
-  @apply bg-DHeader text-Header
+  @apply bg-DHeader text-Header;
 }
 
 .fhtext {
-  @apply lg:text-[36px] md:text-[30px] text-[24px] text-Header;
+  @apply lg:text-[36px] md:text-[30px] text-[24px] text-DHeader;
+}
+.dark .fhtext {
+  @apply text-Header;
 }
 
 .tool-icon {
@@ -157,4 +163,27 @@ body {
     transform: translateY(100vh); /* Fall to the bottom of the screen */
     opacity: 0.5; /* Fades out slightly */
   }
+}
+
+@keyframes gradient-move {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.animated-gradient {
+  background-size: 200% 200%;
+  animation: gradient-move 5s ease infinite;
+}
+
+.animated-border {
+  background-size: 200% 200%;
+  animation: gradient-move 5s ease infinite;
+  padding: 2px;
+  border-radius: 0.5rem;
 }

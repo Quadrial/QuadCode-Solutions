@@ -43,34 +43,39 @@ const ContactForm = () => {
         className="mt-5 w-[300px] md:w-[600px] lg:w-[700px]"
       >
         <div className="flex flex-col gap-2">
-          <label>Name</label>
+          <label className="btext">Name</label>
+          <div className="animated-border border outline-none bg-gradient-to-r from-purple-600 via-blue-500 to-pink-500">
           <input
             type="text"
             name="user_name" // Make sure this matches the template variable
             required
             placeholder="Enter Your Name"
-            className="p-4 h-[50px] rounded-lg"
-          />
+            className="w-full p-2 rounded-md outline-none"
+          /></div>
         </div>
         <div className="mt-10 flex flex-col gap-2">
-          <label>Email</label>
+          <label className="btext">Email</label>
+          <div className="animated-border border outline-none bg-gradient-to-r from-purple-600 via-blue-500 to-pink-500">
           <input
             type="email"
             name="user_email" // Make sure this matches the template variable
             required
             placeholder="Enter Your Email"
-            className="p-4 h-[50px] rounded-lg"
-          />
+            className="w-full p-2 rounded-md outline-none"
+          /></div>
         </div>
         <div className="mt-10 flex flex-col gap-2">
-          <label>Message</label>
+          <label className="btext">Message</label>
+          <div className="animated-border border outline-none bg-gradient-to-r from-purple-600 via-blue-500 to-pink-500">
           <textarea
             name="message" // Make sure this matches the template variable
             required
             placeholder="Enter Your Message"
-            className="p-4 h-[200px] rounded-lg"
-          />
+            className="w-full p-4 rounded-md outline-none"
+          /></div>
         </div>
+
+        
         <button type="submit" value="Send" className="btn mt-5">
         💌 SEND 💌
         </button>

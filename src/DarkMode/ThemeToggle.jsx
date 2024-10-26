@@ -24,7 +24,7 @@ const ThemeToggle = () => {
   };
 
   return (
-    <button onClick={toggleTheme} className="rounded flex gap-2 items-center">
+    <button onClick={toggleTheme} className="rounded flex gap-2 items-center text-2xl">
       {theme === "dark" ? <IoMoonOutline /> : <IoSunnyOutline />}
     </button>
   );
